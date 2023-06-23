@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+
+@media (min-width: 1400px){
+
+    .container,
+    .container-lg, 
+    .container-md, 
+    .container-sm, 
+    .container-xl, 
+    .container-xxl 
+        {
+             max-width: 1400px;
+        }
+}
+
+a{
+    text-decoration: none;
+}
+
+/* common button */
+.comm_btn a{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #FF5538;
+    padding: 14px 28px;
+    color: #ffffff;
+    border-radius: 18px;
+    transition: .4s;
+    border: 2px solid transparent;
+}
+.comm_btn:hover a{
+    color: #FF5538;
+    border-color: #FF5538;
+    background-color: transparent;
+}
+/* common button */
+
+p{
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #29313D;
+}
+/* body{
+    overflow-x: hidden;
+} */
+
+.red_tittle{
+    color: #FF5538;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.tittle_1{
+    color: #29313D;
+    font-size: 46px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+
+/* common css End */
+
+/*====================== 
+    Navbar Start 
+========================*/
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 999;
+}
+#header ul li a{
+ margin-right: 48px;
+ color: #29313D;
+ transition: .4s;
+}
+#header ul li a:hover{
+ color: #FF5538;
+}
+#header .active{
+ color: #FF5538;
+}
+
+/*====================== 
+    Navbar End 
+========================*/
+
+/*====================== 
+    Banner Start 
+========================*/
+
+#banner{
+    background-color:  #FFDCD8;
+    padding:200px 0 350px 0;
+    position: relative;
+    overflow: hidden;
+}
+#banner .side_img_1{
+    position: absolute;
+    top: 350px;
+    right: -40%;
+    animation: zoom_right 9s linear infinite;
+}
+@keyframes zoom_right{
+    0%{
+        transform: scale(.8);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(.8);
+    }
+}
+#banner .side_img_2{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    animation: zoom_left 5s linear infinite;
+}
+@keyframes zoom_left{
+    0%{
+        transform: scale(1) rotateX(1deg);
+    }
+    50%{
+        transform: scale(1.1) rotateX(20deg);
+    }
+    100%{
+        transform: scale(1) rotateX(1deg);
+    }
+}
+#banner .side_img_3 {
+    position: absolute;
+    top: 75px;
+    left: 35%;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#banner .side_img_4 {
+    position: absolute;
+    top: 129px;
+    left: 7%;
+    animation: zoom 2s linear infinite;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(.3);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(.3);
+    }
+}
+#banner .side_img_5 {
+    position: absolute;
+    top: 200px;
+    left: 60%;
+    animation: zoom 2s linear infinite;
+}
+#banner .side_img_6 {
+    position: absolute;
+    bottom: 230px;
+    left: 2%; 
+    animation: zoom 2s linear infinite;
+}
+#banner .side_img_7 {
+    position: absolute;
+    top: 527px;
+    left: 5%;
+    animation: zoom 2s linear infinite;
+}
+#banner .side_img_8 {
+    position: absolute;
+    top: 300px;
+    right: 20%;
+    animation: zoom 1s linear infinite;
+}
+#banner .side_img_9 {
+    position: absolute;
+    top: 150px;
+    left: 70%;
+    animation: zoom 6s linear infinite;
+}
+#banner .side_img_10 {
+    position: absolute;
+    top: -85px;
+    left: -5%;
+    height: 150px;
+    width: 150px;
+    animation: spin 10s linear infinite;
+}
+#banner .side_img_11 {
+    position: absolute;
+    bottom: -80px;
+    right: -5%;
+    height: 175px;
+    width: 175px;
+    animation: spin 10s linear infinite;
+}
+#banner .contact_bar {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 300px;
+    left: -155px;
+}
+#banner .contact_bar span{
+    font: 18px;
+    font-weight: 600;
+    color: #29313D;
+    
+}
+#banner .contact_bar span:nth-child(2){
+    margin: 0 50px;
+}
+#banner .contact_bar span:nth-child(1){
+    position: relative;
+}
+#banner .contact_bar span:nth-child(1)::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #29313D;
+    position: absolute;
+    top: 13px;
+    left: -116px;
+}
+#banner .contact_bar span:nth-child(1)::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #29313D;
+    position: absolute;
+    top: 9px;
+    left: -55px;
+    border-radius: 100%;
+    /* animation: top_down 0 linear infinite; */
+}
+/* @keyframes top_down{
+    0%{
+        left: -50px;
+    }
+    50%{
+        left: -70px;
+    }
+    100%{
+        left: -50px;
+    }
+}
+#banner .contact_bar:hover span:nth-child(1)::before{
+    animation: top_down 1s linear infinite;
+} */
+#banner .main .text{
+    text-align: center;
+}
+#banner .main .text h2 {
+    font-size: 64px;
+    color: #29313D;
+    font-weight: 700;
+    width: 700px;
+    margin: 30px auto;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+#banner .main .text p{
+    width: 500px;
+    margin: 0 auto;
+}
+#banner .main .banner_btn{
+    display: flex;
+    width: 400px;
+    margin: 30px auto;
+    justify-content: center;
+}
+#banner .main .banner_btn .comm_btn{
+    margin-right: 24px;
+    display: flex;
+    justify-content: center;
+}
+#banner .main .banner_btn .comm_btn_two a{
+    background-color: transparent;
+    transition: .4s;
+    border: 2px solid #FF5538;
+    color: #FF5538;
+}
+#banner .main .banner_btn .comm_btn_two:hover a{
+    background-color: #FF5538;
+    color: #ffffff;
+}
+
+/*====================== 
+    Banner End 
+========================*/
+
+/*====================== 
+    Skill Start 
+========================*/
+
+#skill {
+    position: relative;
+    top: -145px;
+    z-index: 11;
+}
+#skill .side_anim{
+    position: absolute;
+    top: 90px;
+    left: -20px;
+    width: 100px;
+    animation: left_right .6s linear infinite;
+}
+@keyframes left_right{
+    0%{
+        left: 5px;
+    }
+    50%{
+        left: -10px;
+    }
+    100%{
+        left: 5px;
+    }
+}
+#skill .main .item{
+    width: 400px;
+    padding: 15px;
+    background-color: #ffffff;
+    transition: .4s;
+}
+#skill .main .item:hover{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+#skill .main .item .skill_img {
+    margin: 20px 0;
+    width: 70px;
+    height: 100px;
+}
+#skill .main .item .skill_text h4 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #29313D;
+    margin: 10px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+#skill .main .item .skill_text p{
+    padding-right: 50px;
+}
+
+/*====================== 
+    Skill End 
+========================*/
+
+/*====================== 
+    Digital Start 
+========================*/
+
+#digital{
+    position: relative;
+    z-index: 22;
+}
+#digital .tittle h4 {
+    width: 400px;
+    line-height: 70px;
+}
+#digital .side_img_1 {
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    width: 100px;
+    z-index: -1;
+    animation: spin 5s linear infinite;
+}
+#digital .side_img_2 {
+    position: absolute;
+    right: 100px;
+    top: 140px;
+    animation: zoom 3s linear infinite;
+}
+#digital .side_img_3{
+    position: absolute;
+    right: -200px;
+    top: 300px;
+    z-index: 111;
+    transform: rotate(-8deg);
+}
+#digital .main .left{
+    width: 50%;
+    height: 420px;
+    background-color: aqua;
+    display: flex;
+    align-self: center;
+    
+}
+#digital .main .right{
+    width: 50%;
+    height: 520px;
+    background: #FFDCD8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#digital .main .right::after {
+    content: '';
+    width: 100px;
+    height: 100%;
+    background: #FFDCD8;
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    z-index: -1;
+    transform: translate(-169%, -50%);
+}
+#digital .main .right h4{
+    font-size: 36px;
+    font-weight: 600;
+    color: #29313D;
+    width: 500px;
+    padding: 30px 0;
+    margin-top: -30px;
+    margin-left: 30px;
+}
+#digital .main .right p{
+    width: 500px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+#digital .main .right .comm_btn{
+    margin-left: 30px;
+}
+/*====================== 
+Digital end 
+========================*/
+
+/*========================== 
+    Comjplate Work Start
+============================*/
+
+#work {
+    margin-top: 150px;
+    position: relative;
+    z-index: 2;
+}
+#work .side_img_1 {
+    width: 500px;
+    position: absolute;
+    top: -313px;
+    left: -172px;
+    z-index: -10;
+    transform: rotate(-5deg);
+    animation: left_right2 3s linear infinite;
+}
+@keyframes left_right2{
+    0%{
+        left: -165px;
+    }
+    50%{
+        left: -172px;
+    }
+    100%{
+        left: -165px;
+    }
+}
+#work .side_img_2 {
+    position: absolute;
+    width: 100px;
+    top: -160px;
+    left: 70px;
+}
+#work .hader_part{
+    display: flex;
+    justify-content: space-between;
+}
+#work .hader_part .comm_btn_two a{
+    background-color: transparent;
+    transition: .4s;
+    border: 2px solid #FF5538;
+    color: #FF5538;
+    transition: .4s;
+    padding: 14px 28px;
+}
+#work .hader_part .comm_btn_two:hover a{
+    background-color: #FF5538;
+    color: #ffffff;
+}
+#work .tittle h4{
+    width: 650px;
+}
+#work .main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#work .text span{
+    color: #FF5538;
+}
+#work .main .left_item{
+    width: 45%;
+}
+#work .main .left_item2{
+    width: 50%;
+}
+
+
+/*=========================== 
+    Comjplate Work Start end 
+=============================*/
+
+/*====================== 
+    Counter Start 
+========================*/
+
+#counter{
+    background-color: #FFDCD8;
+    position: relative;
+    z-index: 1;
+}
+#counter .side_img_1{
+    position: absolute;
+    top: 200px;
+    left: -20px;
+    z-index: -1;
+    animation: spin 10s linear infinite;
+}
+#counter .item{
+    padding: 74px 60px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    text-align: center;
+}
+#counter .item h4{
+    font-size: 40px;
+    font-weight: 600;
+}
+#counter .item span{
+    color: #FF5538;
+}
+#counter .text h4{
+    width: 550px;
+    font-size: 46px;
+    font-weight: 600;
+    color: #29313D;
+    text-transform: capitalize;
+    line-height: 70px;
+}
+#counter .text{
+    margin-left: 30px;
+}
+#counter .text p{
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/*====================== 
+    Counter end 
+========================*/
+/*====================== 
+    Orginaition Start 
+========================*/
+
+#orginition{
+    padding: 100px 0;
+}
+#orginition h4{
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+#orginition .img_item{
+    opacity: 50%;
+    transition: .4s;
+}
+#orginition .img_item:hover{
+    opacity: 100%;
+}
+
+/*====================== 
+    Orginaition end 
+========================*/
+
+/*====================== 
+    Lets Talk Start 
+========================*/
+
+#lets_talk{
+    background-color: #FFD7C8;
+    padding: 50px 0;
+}
+#lets_talk .left_side span{
+    font-size: 20px;
+    font-weight: 400;
+}
+#lets_talk .right_side{
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+}
+#lets_talk .line {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(41, 49, 61);
+    margin: 50px 0px 20px;
+    opacity: 40%;
+}
+#lets_talk p{
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+/*====================== 
+    Lets Talk end 
+========================*/
+
+/*====================== 
+Footer Start 
+========================*/
+
+#footer_tab .margin_left {
+    margin-left: 100px !important;
+}
+#footer_tab p{
+    transition: .4s;
+    cursor: pointer;
+}
+#footer_tab p:hover{
+    color: #FF5538;
+}
+
+
+/*====================== 
+    Footer end 
+========================*/
